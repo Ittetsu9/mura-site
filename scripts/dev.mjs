@@ -7,10 +7,19 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const port = 4173;
 
 http.createServer(async (req, res) => {
-  const file = req.url === "/og.png" ? "og.png" : "index.html";
+  const pathname = decodeURIComponent(new URL(req.url, "http://localhost").pathname);
+  const file = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
+  const types = {
+    ".html": "text/html; charset=utf-8",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".png": "image/png",
+    ".webp": "image/webp",
+  };
+  const extension = Object.keys(types).find((type) => file.toLowerCase().endsWith(type));
   try {
     const body = await readFile(join(root, "public", file));
-    res.writeHead(200, { "content-type": file.endsWith(".png") ? "image/png" : "text/html; charset=utf-8" });
+    res.writeHead(200, { "content-type": types[extension] ?? "application/octet-stream" });
     res.end(body);
   } catch {
     res.writeHead(404);
