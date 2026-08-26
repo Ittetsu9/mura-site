@@ -1,0 +1,6 @@
+.git
+.openai
+dist
+scripts
+src
+pnpm-workspace.yaml
