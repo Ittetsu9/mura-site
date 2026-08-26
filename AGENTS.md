@@ -42,3 +42,18 @@
 - 実行した確認（lint、テスト、ビルド、表示確認など）
 - push・デプロイの有無と結果
 - 残っている注意点や、ユーザー側で必要な作業
+
+## ローカル環境と Git の安全設定
+
+- Windows 上の Codex では、隔離ユーザーと Windows ユーザーの違いにより、Git が `detected dubious ownership` を表示することがあります。
+- このリポジトリでは `C:/projects/mura-site` を Git の `safe.directory` として登録済みです。通常は追加対応なしで Git を使用できます。
+- 同じエラーが出た場合は、まず `git config --global --get-all safe.directory` で登録状況とパスの一致を確認します。
+- 登録が失われている場合は、ユーザーの明示的な許可を得てから `git config --global --add safe.directory C:/projects/mura-site` を実行します。
+- `safe.directory=*` のように全リポジトリを無条件で信頼する設定は使用しません。
+- 恒久設定が不要な調査では、`git -c safe.directory=C:/projects/mura-site <command>` のように、そのコマンドだけへ限定して指定します。
+- `work/` はローカル作業用ディレクトリであり、`.gitignore` の対象です。コミットへ含めません。
+- `helper_unknown_error: setup refresh had errors` は Git の警告とは別で、Codex の Windows 隔離環境がアクセス権を更新できないときに発生します。
+- このリポジトリでは、`.git` 配下の所有者を Windows ユーザーへ統一して解消済みです。通常は対応不要です。
+- 再発時は `C:/Users/<ユーザー名>/.codex/.sandbox/` の当日ログを確認し、`deny ACE failed on .../.git` と `SetNamedSecurityInfoW ... 5` が揃っているか確認します。
+- 上記が確認できた場合のみ、対象を `C:/projects/mura-site/.git` に限定して所有者を現在の Windows ユーザーへ戻します。再帰的な所有者変更には管理者権限とユーザーの明示的な許可が必要です。
+- 所有者変更後は、権限昇格なしのコマンドで `git status --short --branch` を実行し、隔離環境が正常に起動することを確認します。
