@@ -43,6 +43,31 @@ body{background:#fff}.bar{background:#fff;border-bottom:1px solid #dfe5e4}.bar a
   .title{left:7vw;right:11vw;bottom:18vh;width:auto}.title h1{font-size:clamp(3.75rem,15.3vw,5.8rem);line-height:.98}
   .hero-brand{left:7vw;bottom:7vh;font-size:.82rem}.hero-scroll{right:5vw;bottom:8vh;font-size:.6rem}
 }
+</style>
+<style>
+/* Typography system: readable Japanese rhythm, clear hierarchy, responsive measure. */
+body{font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;font-size:clamp(1rem,.94rem + .18vw,1.125rem);line-height:1.75;letter-spacing:.015em}
+.bar,.title,.big,.vc h2,.program h3,.footer{font-family:"Arial Black","Yu Gothic",sans-serif}
+.bar{line-height:1.35}.bar strong{letter-spacing:.06em}.bar a{font-size:.9rem;line-height:1.3}
+.title h1{letter-spacing:-.055em;line-height:1.02;text-wrap:balance}
+.hero-brand{line-height:1.4;letter-spacing:.1em}
+.section{padding-block:clamp(76px,9vw,132px)}
+.label{font-size:clamp(.78rem,.74rem + .12vw,.875rem);line-height:1.4;letter-spacing:.2em;font-weight:800}
+.big{font-size:clamp(2.75rem,5.6vw,6rem);line-height:1.04;letter-spacing:-.045em;margin:clamp(.85rem,1.8vw,1.5rem) 0 clamp(1.6rem,3vw,2.7rem);text-wrap:balance}
+.copy,.moment-lead,.program ul,.program p,.card p,.note{font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif}
+.copy{max-width:34em;margin:0;font-size:clamp(1.05rem,.99rem + .2vw,1.2rem);font-weight:500;line-height:1.85;letter-spacing:.01em}
+.copy strong{font-weight:800}
+.intro{gap:clamp(52px,7vw,110px)}
+.moment-lead{max-width:34em;margin:0 0 clamp(48px,6vw,82px);font-size:clamp(1.05rem,.99rem + .2vw,1.2rem);line-height:1.85;font-weight:500;letter-spacing:.01em}
+.vc{padding:clamp(28px,5vw,72px)}.vc small{font-size:.8rem;line-height:1.4}.vc h2{font-size:clamp(3rem,6vw,6.4rem);line-height:1.02;letter-spacing:-.045em;margin:.75rem 0 1.1rem}.vc>b{font-size:clamp(1.05rem,1rem + .25vw,1.28rem);line-height:1.65;max-width:22em}
+.sound,.tag{font-size:clamp(.92rem,.88rem + .12vw,1.02rem);line-height:1.45}
+.seasonCopy .copy{max-width:29em}.programs>.big{margin-bottom:clamp(36px,5vw,64px)}
+.grid{gap:clamp(16px,2vw,28px)}.program{min-height:620px;padding:clamp(28px,3vw,42px);line-height:1.65}.program small{font-size:.8rem;line-height:1.4;letter-spacing:.08em}.program .date{font-size:clamp(1rem,.96rem + .12vw,1.08rem);line-height:1.55}.program h3{font-size:clamp(1.75rem,2.25vw,2.4rem);line-height:1.3;letter-spacing:-.025em;margin:1rem 0 .65rem;text-wrap:balance}.program ul{font-size:clamp(1rem,.96rem + .12vw,1.08rem);font-weight:500;line-height:1.7;margin:1.35rem 0}.program li{padding:.72rem 0}.program p{max-width:34em;font-size:clamp(1rem,.96rem + .12vw,1.08rem);font-weight:500;line-height:1.8;margin-bottom:0}
+.details>.big{margin-bottom:clamp(36px,5vw,62px)}.cards{gap:clamp(18px,2vw,30px)}.card{padding:clamp(28px,3.5vw,46px)}.card h3{font-size:clamp(1.3rem,1.15rem + .45vw,1.65rem);line-height:1.4;margin:0 0 1rem}.card p{max-width:34em;margin:0;font-size:clamp(1rem,.96rem + .12vw,1.08rem);font-weight:500;line-height:1.8}.card p strong{font-weight:800}
+.contact .big{margin-bottom:clamp(34px,4vw,52px)}.links a{font-size:clamp(1rem,.96rem + .14vw,1.1rem);font-weight:800;line-height:1.35}.note{max-width:40em;margin:clamp(30px,4vw,46px) auto 0;font-size:clamp(.9rem,.86rem + .12vw,.98rem);font-weight:500;line-height:1.75}.footer{font-size:.9rem;line-height:1.5;letter-spacing:.04em}
+@media(max-width:1100px) and (min-width:761px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.program:last-child{grid-column:1/-1;min-height:560px}.program:last-child img{width:min(34%,300px)}.seasonHero{grid-template-columns:1.05fr .95fr}}
+@media(max-width:760px){body{font-size:1rem;line-height:1.75}.section{padding:clamp(72px,20vw,96px) clamp(20px,6.5vw,30px)}.title{right:8vw;bottom:18vh}.title h1{font-size:clamp(2.5rem,13vw,4.6rem);line-height:1.03;letter-spacing:-.045em}.hero-brand{font-size:.8rem}.big{font-size:clamp(2.55rem,11.5vw,3.75rem);line-height:1.08;letter-spacing:-.04em;margin-top:.8rem;margin-bottom:1.5rem}.label{font-size:.76rem;letter-spacing:.16em}.copy,.moment-lead{font-size:1.0625rem;line-height:1.85;max-width:30em}.intro{gap:64px}.intro .big br:nth-of-type(2){display:none}.moment-lead{margin-bottom:44px}.moment-lead br{display:none}.mosaic{gap:16px}.verb,.verb:nth-child(even){grid-template-rows:78vw minmax(210px,48vw)}.vc{padding:28px 22px}.vc h2{font-size:clamp(2.8rem,13vw,4.2rem);margin:.6rem 0 .8rem}.vc>b{font-size:1.05rem}.seasonCopy{padding:clamp(68px,18vw,92px) clamp(22px,7vw,34px)}.seasonCopy .big br{display:none}.seasonCopy .copy{font-size:1.0625rem}.seasonCopy .copy br{display:none}.programs{padding:clamp(72px,20vw,100px) clamp(20px,6.5vw,30px)}.programs>.big br{display:none}.grid{gap:22px}.program{min-height:0;padding:30px 26px 32px}.program img{width:43%;top:24px}.date{margin-top:7.5rem}.program h3{font-size:clamp(1.75rem,8vw,2.2rem);line-height:1.3}.program ul,.program p{font-size:1rem}.cards{gap:18px}.card{padding:27px 24px}.card h3{font-size:1.35rem;margin-bottom:.8rem}.card p{font-size:1rem;line-height:1.8}.contact .big br{display:none}.links{gap:14px}.links a{width:min(100%,22em);padding:1rem 1.2rem}.note{font-size:.9rem;text-align:left}.footer{padding:1.4rem 6.5vw;font-size:.82rem;line-height:1.6}}
+@media(max-width:370px){.title h1{font-size:3.15rem}.big{font-size:2.45rem}.program{padding-inline:22px}.program h3{font-size:1.7rem}}
 </style></head><body>
 <header class="bar"><strong>むら旅＠きたあいき</strong><a href="#entry">次のむら旅へ →</a></header><main>
 <section class="hero"><div class="collage"><figure class="pic"><img src="/images/experience/hero-river.webp" alt="川の中で夢中になって遊ぶ子どもたち"></figure></div><div class="title"><h1><span>自然に、</span><span>夢中になる。</span></h1></div><p class="hero-brand">むら旅＠きたあいき</p><span class="hero-scroll" aria-hidden="true">SCROLL TO DIVE IN</span></section>
